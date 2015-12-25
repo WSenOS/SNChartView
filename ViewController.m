@@ -18,8 +18,8 @@
     [super viewDidLoad];
     SNChart * chart = [[SNChart alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height - 100) withDataSource:self andChatStyle:SNChartStyleBar];
     
-    //    SNChart * chart = [[SNChart alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height - 100) withDataSource:self andChatStyle:SNChartStyleLine];
-    //    chart.curve = YES;//曲线 折线开关
+//    SNChart * chart = [[SNChart alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height - 100) withDataSource:self andChatStyle:SNChartStyleLine];
+//    chart.curve = YES;//曲线 折线开关
     [chart showInView:self.view];
 }
 
