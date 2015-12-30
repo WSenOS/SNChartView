@@ -1,7 +1,7 @@
 #SNChartView
 实现简单的图表线性图，柱状图
 
-![image](https://github.com/WSeniOS/SNChartView/blob/master/images/bar.png)            ![image](https://github.com/WSeniOS/SNChartView/blob/master/images/line.png)
+![image](https://github.com/WSeniOS/SNChartView/blob/master/SNChartView/images/bar.png)            ![image](https://github.com/WSeniOS/SNChartView/blob/master/SNChartView/images/line.png)
 
 #使用方式
 #线性图
