@@ -118,9 +118,16 @@ static const CGFloat kTopSpace = 50.f;//距离顶部y值
     for (NSInteger i = 0; i < _xValues.count; i++) {
         [self.pointXArray addObject:@(chartLineStartX + chartLineTheXAxisSpan * i)];
     }
-    //设置y轴
-    for (NSInteger i = 0; i < _xValues.count; i++) {
-        [self.pointYArray addObject:@(chartLineTheYAxisSpan * kYEqualPaths - [_yValues[i] floatValue]/_yMax * chartLineTheYAxisSpan * kYEqualPaths + kTopSpace)];
+    //最大值不为零的时候
+    if (_yMax > 0) {
+        for (NSInteger i = 0; i < _xValues.count; i++) {
+            [self.pointYArray addObject:@(chartLineTheYAxisSpan * kYEqualPaths - [_yValues[i] floatValue]/_yMax * chartLineTheYAxisSpan * kYEqualPaths + kTopSpace)];
+        }
+    } else {
+        //全部为零的时候
+        for (NSInteger i = 0; i < _xValues.count; i++) {
+            [self.pointYArray addObject:@(chartLineTheYAxisSpan * kYEqualPaths + kTopSpace)];
+        }
     }
     
     for (NSInteger i = 0; i < self.pointXArray.count; i++) {

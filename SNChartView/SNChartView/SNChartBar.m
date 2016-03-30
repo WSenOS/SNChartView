@@ -132,8 +132,14 @@ static const CGFloat kBarWidth = 30.f;
         [self.pointXArray addObject:@(chartBarStartX + chartBarTheXAxisSpan * i)];
     }
     //设置y轴
-    for (NSInteger i = 0; i < _xValues.count; i++) {
-        [self.pointYArray addObject:@(chartBarTheYAxisSpan * kYEqualPaths - [_yValues[i] floatValue]/_yMax * chartBarTheYAxisSpan * kYEqualPaths + kTopSpace)];
+    if (_yMax > 0) {
+        for (NSInteger i = 0; i < _xValues.count; i++) {
+            [self.pointYArray addObject:@(chartBarTheYAxisSpan * kYEqualPaths - [_yValues[i] floatValue]/_yMax * chartBarTheYAxisSpan * kYEqualPaths + kTopSpace)];
+        }
+    } else {
+        for (NSInteger i = 0; i < _xValues.count; i++) {
+            [self.pointYArray addObject:@(chartBarTheYAxisSpan * kYEqualPaths + kTopSpace)];
+        }
     }
     
     for (NSInteger i = 0; i < self.pointXArray.count; i++) {
