@@ -16,15 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    SNChart * chart = [[SNChart alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height - 100) withDataSource:self andChatStyle:SNChartStyleBar];
+    SNChart * chart = [[SNChart alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height - 100) withDataSource:self andChatStyle:SNChartStyleLine];
     
 //    SNChart * chart = [[SNChart alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height - 100) withDataSource:self andChatStyle:SNChartStyleLine];
-//    chart.curve = YES;//曲线 折线开关
+    chart.curve = YES;//曲线 折线开关
+    chart.shadow = YES;//阴影 折线开关
     [chart showInView:self.view];
 }
 
 - (NSArray *)chatConfigYValue:(SNChart *)chart {
-//    return @[@"0.1",@"0.5",@"0.70",@"0.30",@"0.50",@"0.014",@"0",@"0.14"];
+    return @[@"0.1",@"0.5",@"0.70",@"0.30",@"0.50",@"0.014",@"0",@"0.14"];
         return @[@"0"];
 }
 

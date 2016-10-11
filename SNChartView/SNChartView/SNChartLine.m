@@ -140,6 +140,13 @@ static const CGFloat kTopSpace = 50.f;//距离顶部y值
     _shapeLayer = [CAShapeLayer layer];
     _shapeLayer.lineCap = kCALineCapRound;
     _shapeLayer.lineJoin = kCALineJoinRound;
+    //阴影
+    if (self.shadow) {
+        _shapeLayer.shadowColor = [UIColor blackColor].CGColor;
+        _shapeLayer.shadowOpacity = 0.5f;
+        _shapeLayer.shadowOffset = CGSizeMake(1, 0);
+        _shapeLayer.shadowRadius = 2.f;
+    }
     _shapeLayer.lineWidth = 2.f;
     _shapeLayer.fillColor = [UIColor clearColor].CGColor;
     _shapeLayer.strokeEnd = 0.f;

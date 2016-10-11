@@ -25,6 +25,7 @@
         self.dataSource = dataSource;
         self.chartStyle = chartStyle;
         self.curve = NO;
+        self.shadow = NO;
     }
     return self;
 }
@@ -56,6 +57,7 @@
         
         self.chartLine.yMax = [sourtArray.firstObject floatValue];
         self.chartLine.curve = self.curve;
+        self.chartLine.shadow = self.shadow;
         [self.chartLine setXValues:xArray];
         [self.chartLine setYValues:yArray];
         

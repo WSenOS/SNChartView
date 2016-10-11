@@ -30,6 +30,11 @@ typedef NS_ENUM(NSInteger, SNChartStyle) {
  *  line  是否曲线
  */
 @property (nonatomic, assign) BOOL curve;
+/*
+ *  line 是否有折线阴影
+ */
+@property (nonatomic, assign) BOOL shadow;
+
 
 - (instancetype)initWithFrame:(CGRect)frame withDataSource:(id<SNChartDataSource>)dataSource andChatStyle:(SNChartStyle)chartStyle;
 

@@ -20,6 +20,7 @@ static const CGFloat chartLineTheYAxisSpan = 50.f;
 @property (nonatomic, assign) CGFloat yMax;
 
 @property (nonatomic, assign) BOOL curve;//是否曲线
+@property (nonatomic, assign) BOOL shadow;//是否有折线阴影
 
 /**
  *  @author sen, 15-12-24 10:12:59
