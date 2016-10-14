@@ -25,6 +25,7 @@
 }
 
 - (NSArray *)chatConfigYValue:(SNChart *)chart {
+    return @[@"7.56",@"7.56",@"7.54",@"7.56",@"7.56",@"7.57",@"7.56",@"7.56"];
     return @[@"0.1",@"0.5",@"0.70",@"0.30",@"0.50",@"0.014",@"0",@"0.14"];
         return @[@"0"];
 }
@@ -34,9 +35,5 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

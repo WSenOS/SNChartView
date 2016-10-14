@@ -7,6 +7,7 @@
 //
 
 #import "SNChart.h"
+#import "SNChartConst.h"
 #import "SNChartLine.h"
 #import "SNChartBar.h"
 @interface SNChart ()

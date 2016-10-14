@@ -7,12 +7,14 @@
 //
 
 #import "UIBezierPath+curved.h"
+#import "SNChartConst.h"
 
 // Based on code from Erica Sadun
 void getPointsFromBezier(void *info, const CGPathElement *element);
 NSArray *pointsFromBezierPath(UIBezierPath *bpath);
 
-static const CGFloat kChartLineMaxY = 300.f; //由线性图部分决定y值最大为300.f
+static const CGFloat kChartLineMaxY = chartLineTheYAxisSpan * kYEqualPaths + kTopSpace; //由线性图部分y值最大值决定
+static const CGFloat kChartLineMinY = kTopSpace; //由线性图y的起始最小值决定
 
 #define VALUE(_INDEX_) [NSValue valueWithCGPoint:points[_INDEX_]]
 #define POINT(_INDEX_) [(NSValue *)[points objectAtIndex:_INDEX_] CGPointValue]
@@ -76,6 +78,9 @@ NSArray *pointsFromBezierPath(UIBezierPath *bpath)
             pi.y = 0.5 * (2*p1.y+(p2.y-p0.y)*t + (2*p0.y-5*p1.y+4*p2.y-p3.y)*tt + (3*p1.y-p0.y-3*p2.y+p3.y)*ttt);
             if (pi.y > kChartLineMaxY) {
                 pi.y = kChartLineMaxY;
+            }
+            if (pi.y < kChartLineMinY) {
+                pi.y = kChartLineMinY;
             }
             [smoothedPath addLineToPoint:pi];
         }

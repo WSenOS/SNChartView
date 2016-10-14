@@ -7,15 +7,12 @@
 //
 
 #import "SNChartLine.h"
-#import "UIBezierPath+curved.h"
-#define kBtnTag 100
-#define kLineColor [UIColor colorWithRed:1.000f green:0.769f blue:0.000f alpha:1.00f]
-#define kCirCleColor [UIColor colorWithRed:0.859f green:0.871f blue:0.882f alpha:1.00f]
-#define kHVLineColor [UIColor colorWithRed:0.918f green:0.929f blue:0.949f alpha:1.00f]
-#define kBulldesFont [UIFont systemFontOfSize:10]
+#import "SNChartConst.h"
 
-static const NSInteger kYEqualPaths = 5;//y轴为5等份
-static const CGFloat kTopSpace = 50.f;//距离顶部y值
+#define kBtnTag 100
+
+//static const NSInteger kYEqualPaths = 5;//y轴为5等份
+//static const CGFloat kTopSpace = 50.f;//距离顶部y值
 
 @interface SNChartLine ()
 @property (nonatomic, strong) CAShapeLayer * shapeLayer;
@@ -87,7 +84,7 @@ static const CGFloat kTopSpace = 50.f;//距离顶部y值
         [path addLineToPoint:CGPointMake(chartLineStartX + (_xValues.count - 1) * 50, chartLineTheYAxisSpan * i + kTopSpace)];
         [path closePath];
         shapeLayer.path = path.CGPath;
-        shapeLayer.strokeColor = kHVLineColor.CGColor;
+        shapeLayer.strokeColor = kHVLineLineColor.CGColor;
         shapeLayer.fillColor = [[UIColor whiteColor] CGColor];
         shapeLayer.lineWidth = 0.3f;
         [self.layer addSublayer:shapeLayer];
@@ -106,7 +103,7 @@ static const CGFloat kTopSpace = 50.f;//距离顶部y值
         [path addLineToPoint:CGPointMake(chartLineStartX + chartLineTheXAxisSpan * i,chartLineTheYAxisSpan * kYEqualPaths + kTopSpace)];
         [path closePath];
         shapeLayer.path = path.CGPath;
-        shapeLayer.strokeColor = kHVLineColor.CGColor;
+        shapeLayer.strokeColor = kHVLineLineColor.CGColor;
         shapeLayer.fillColor = [[UIColor whiteColor] CGColor];
         shapeLayer.lineWidth = 0.3f;
         [self.layer addSublayer:shapeLayer];

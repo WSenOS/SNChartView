@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-static const CGFloat chartBarStartX = 80.f;
-static const CGFloat chartBarTheXAxisSpan = 50.f;
-static const CGFloat chartBarTheYAxisSpan = 50.f;
 
 @interface SNChartBar : UIView
 

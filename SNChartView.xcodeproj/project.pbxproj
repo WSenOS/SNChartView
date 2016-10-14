@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B2C014A1DB0686600791EF1 /* SNChartConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNChartConst.h; sourceTree = "<group>"; };
 		4BBAE2021C2D021D003DEFDA /* SNChartView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNChartView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBAE2061C2D021D003DEFDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BBAE2081C2D021D003DEFDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -163,6 +164,7 @@
 		4BBAE2381C2D022E003DEFDA /* SNChartView */ = {
 			isa = PBXGroup;
 			children = (
+				4B2C014A1DB0686600791EF1 /* SNChartConst.h */,
 				4BBAE2391C2D022E003DEFDA /* SNChart.h */,
 				4BBAE23A1C2D022E003DEFDA /* SNChart.m */,
 				4BBAE23B1C2D022E003DEFDA /* SNChartBar.h */,

@@ -7,15 +7,9 @@
 //
 
 #import "SNChartBar.h"
-#define kBtnTag 100
-#define kBarLineColor [UIColor colorWithRed:1.000f green:0.769f blue:0.000f alpha:1.00f]
-#define kCirCleColor [UIColor colorWithRed:0.859f green:0.871f blue:0.882f alpha:1.00f]
-#define kHVLineColor [UIColor colorWithRed:0.918f green:0.929f blue:0.949f alpha:1.00f]
-#define kBulldesFont [UIFont systemFontOfSize:10]
+#import "SNChartConst.h"
 
-static const NSInteger kYEqualPaths = 5;//y轴为5等份
-static const CGFloat kTopSpace = 50.f;//距离顶部y值
-static const CGFloat kBarWidth = 30.f;
+#define kBtnTag 100
 
 @interface SNChartBar ()
 @property (nonatomic, strong) CAShapeLayer * shapeLayer;
@@ -80,8 +74,7 @@ static const CGFloat kBarWidth = 30.f;
         [path addLineToPoint:CGPointMake(chartBarStartX + (_xValues.count) * 50, chartBarTheYAxisSpan * i + kTopSpace)];
         [path closePath];
         shapeLayer.path = path.CGPath;
-//        shapeLayer.strokeColor = kHVLineColor.CGColor;
-        shapeLayer.strokeColor = [UIColor lightGrayColor].CGColor;
+        shapeLayer.strokeColor = kHVBarLineColor.CGColor;
         shapeLayer.fillColor = [[UIColor whiteColor] CGColor];
         shapeLayer.lineWidth = 0.3f;
         [self.layer addSublayer:shapeLayer];
@@ -106,7 +99,7 @@ static const CGFloat kBarWidth = 30.f;
         [path addLineToPoint:CGPointMake(chartBarStartX + chartBarTheXAxisSpan * location,chartBarTheYAxisSpan * kYEqualPaths + kTopSpace)];
         [path closePath];
         shapeLayer.path = path.CGPath;
-        shapeLayer.strokeColor = [UIColor lightGrayColor].CGColor;
+        shapeLayer.strokeColor = kHVBarLineColor.CGColor;
         shapeLayer.fillColor = [[UIColor whiteColor] CGColor];
         shapeLayer.lineWidth = 0.3f;
         [self.layer addSublayer:shapeLayer];

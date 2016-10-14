@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-static const CGFloat chartLineStartX = 80.f;
-static const CGFloat chartLineTheXAxisSpan = 50.f;
-static const CGFloat chartLineTheYAxisSpan = 50.f;
+#import "UIBezierPath+curved.h"
 
 @interface SNChartLine : UIView
 
